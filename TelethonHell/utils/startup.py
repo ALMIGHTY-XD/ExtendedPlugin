@@ -10,7 +10,7 @@ from TelethonHell.version import __telever__
 
 # Creates the logger group on first deploy and adds the helper bot
 async def logger_id(client):
-    desc = "A Bot Logger Group For Extended Userbot. DO NOT LEAVE THIS GROUP!!"
+    desc = "𝐀 𝐁𝐨𝐭 𝐋𝐨𝐠𝐠𝐞𝐫 𝐆𝐫𝐨𝐮𝐩 𝐅𝐨𝐫 𝐄𝐱𝐭𝐞𝐧𝐝𝐞𝐝 𝐔𝐬𝐞𝐫𝐛𝐨𝐭. 𝐃𝐎 𝐍𝐎𝐓 𝐋𝐄𝐀𝐕𝐄 𝐓𝐇𝐈𝐒 𝐆𝐑𝐎𝐔𝐏!!"
     try:
         grp = await client(
             functions.channels.CreateChannelRequest(
