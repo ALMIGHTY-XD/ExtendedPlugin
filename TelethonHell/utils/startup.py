@@ -10,11 +10,11 @@ from TelethonHell.version import __telever__
 
 # Creates the logger group on first deploy and adds the helper bot
 async def logger_id(client):
-    desc = "A Bot Logger Group For Hellbot Extended. DO NOT LEAVE THIS GROUP!!"
+    desc = "A Bot Logger Group For Extended Userbot. DO NOT LEAVE THIS GROUP!!"
     try:
         grp = await client(
             functions.channels.CreateChannelRequest(
-                title="EXTENDED LOGS ⚡", about=desc, megagroup=True
+                title="🔰 𝐄𝐗𝐓𝐄𝐍𝐃𝐄𝐃 𝐋𝐎𝐆𝐒", about=desc, megagroup=True
             )
         )
         grp_id = grp.chats[0].id
