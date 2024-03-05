@@ -714,7 +714,7 @@ async def do_pm_permit_action(chat_ids, event, client):
         event.chat_id,
         file=PIC,
         caption=thee_message,
-        parse_mode="HTML",
+        parse_mode="md",
     )
     if chat_ids in client.PREV_REPLY_MESSAGE:
         await client.PREV_REPLY_MESSAGE[chat_ids].delete()
