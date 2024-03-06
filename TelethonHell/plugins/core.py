@@ -58,12 +58,16 @@ async def send(event):
 @hell_cmd(pattern="sendall$")
 async def sendall(event):
     directory_path = "./TelethonHell/plugins/"
-    for file_name in os.listdir(directory_path):
+    # Get a list of file names in the directory
+    file_list = os.listdir(directory_path)
+    # Sort the list by name
+    file_list.sort()
+    # Loop through the sorted list
+    for file_name in file_list:
         if file_name.endswith('.py'):  # This checks for python files
             await event.client.send_file(event.chat_id, directory_path + file_name)
         else:
-            await event.respond("`Error: can't send this specific plugin!`")
-
+            await event.respond("Fetching...")
 
 @hell_cmd(pattern="install(?:\s|$)([\s\S]*)")
 async def install(event):
